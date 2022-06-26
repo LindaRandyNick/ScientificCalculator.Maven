@@ -72,7 +72,7 @@ public class Operation {
         return result;
     }
 
-    //trig function
+    // Trig function
     public static double trigOp(String operation, double displayVal, boolean degree) {
         double n = 0, result = 0;
 
@@ -89,8 +89,8 @@ public class Operation {
         if (operation.equals("sin")) result = sin(n, degree);
         else if (operation.equals("tan")) result = tan(n, degree);
         else if (operation.equals("cos")) result = cos(n, degree);
-        return result;
 
+        return result;
     }
 
     // Factorial function

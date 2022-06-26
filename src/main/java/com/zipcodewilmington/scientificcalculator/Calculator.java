@@ -33,7 +33,7 @@ public class Calculator {
                 System.out.println("Memory Value: " + memoryVal);
             }
             else if (operator.equals("MC")){
-                memoryVal=0;
+                memoryVal = 0;
                 System.out.println("Memory Value: " + memoryVal);
             }
             else if (operator.equals("switch trig unit")) degree = !degree;
@@ -61,7 +61,6 @@ public class Calculator {
                 System.out.println("Invalid operation, please enter help for a list of operations");
                 continue;
             }
-
             printDisplay(displayMode, displayVal);
         }
     }
@@ -115,9 +114,9 @@ public class Calculator {
         System.out.println("Four display modes: binary, octal, decimal, hexadecimal ");
         System.out.println("Clear the display: clear ");
         System.out.println("Turn off the calculator: exit ");
-        System.out.println("Add the currently displayed Value to the value in memory: M+");
-        System.out.println("Reset memory: MC");
-        System.out.println("Recall the current value from memory to display: MRC");
-        System.out.println("Switch trig unit mode(Degree, Radians): switch trig unit");
+        System.out.println("Add the currently displayed Value to the value in memory: M+ ");
+        System.out.println("Reset memory: MC" );
+        System.out.println("Recall the current value from memory to display: MRC" );
+        System.out.println("Switch trig unit mode(Degree, Radians): switch trig unit ");
     }
 }
