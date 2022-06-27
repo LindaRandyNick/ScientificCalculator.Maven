@@ -8,6 +8,7 @@ public class Calculator {
         double memoryVal = 0.0;
         boolean calcOn = true;
         boolean degree = true;
+        boolean printDisplay = true;
 
         String displayMode = "decimal";
 
@@ -35,6 +36,7 @@ public class Calculator {
             }
             else if (operator.equals("switch trig unit")) {
                 degree = !degree;
+                printDisplay = false;
                 if (degree) System.out.println("The current trig unit is set to degrees.");
                 else System.out.println("The current trig unit is set to radians.");
             }
@@ -64,7 +66,8 @@ public class Calculator {
                 continue;
             }
 
-            printDisplay(displayMode, displayVal);
+            if (printDisplay) printDisplay(displayMode, displayVal);
+            else printDisplay = true;
 
         }
     }
