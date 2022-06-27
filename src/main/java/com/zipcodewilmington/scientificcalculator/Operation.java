@@ -92,8 +92,8 @@ public class Operation {
         if (operation.equals("sin")) result = sin(n, degree);
         else if (operation.equals("tan")) result = tan(n, degree);
         else if (operation.equals("cos")) result = cos(n, degree);
-        return result;
 
+        return result;
     }
 
     // Factorial function
