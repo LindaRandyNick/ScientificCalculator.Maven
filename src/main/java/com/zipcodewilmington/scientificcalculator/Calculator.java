@@ -4,12 +4,9 @@ public class Calculator {
 
     public static void run() {
 
-        boolean calcOn = true;
-
         double displayVal = 0.0;
-
         double memoryVal = 0.0;
-
+        boolean calcOn = true;
         boolean degree = true;
 
         String displayMode = "decimal";
@@ -36,7 +33,11 @@ public class Calculator {
                 memoryVal=0;
                 System.out.println("Memory Value: " + memoryVal);
             }
-            else if (operator.equals("switch trig unit")) degree = !degree;
+            else if (operator.equals("switch trig unit")) {
+                degree = !degree;
+                if (degree) System.out.println("The current trig unit is set to degrees.");
+                else System.out.println("The current trig unit is set to radians.");
+            }
             else if (operator.equals("+")) displayVal = Operation.twoNumOp("+", displayVal);
             else if (operator.equals("-")) displayVal = Operation.twoNumOp("-", displayVal);
             else if (operator.equals("*")) displayVal = Operation.twoNumOp("*", displayVal);
@@ -64,9 +65,10 @@ public class Calculator {
             }
 
             printDisplay(displayMode, displayVal);
+
         }
     }
-
+    // Switch display mode (binary, octal, decimal, hexadecimal)
     public static String switchDisplayMode(String currentMode) {
         // Have the user enter the mode they wish to switch to
         String s = Console.getStringInput("Enter the display mode you wish to switch to (leave blank to auto-rotate): ");
@@ -82,7 +84,7 @@ public class Calculator {
             else return "decimal";
         }
     }
-
+    // Convert decimal to octal, hexadecimal and so forth
     public static void printDisplay(String displayMode, double displayVal) {
         if (displayMode.equals("octal")) System.out.println("Current value: " + Long.toOctalString(Double.doubleToRawLongBits(displayVal)));
         else if (displayMode.equals("hexadecimal")) System.out.println("Current value: " + Double.toHexString(displayVal));
@@ -116,10 +118,10 @@ public class Calculator {
         System.out.println("Four display modes: binary, octal, decimal, hexadecimal");
         System.out.println("Clear the display: clear");
         System.out.println("Turn off the calculator: exit");
-        System.out.println("Add the currently displayed Value to the value in memory: M+");
+        System.out.println("Add the currently displayed value to the value in memory: M+");
         System.out.println("Reset memory: MC");
         System.out.println("Recall the current value from memory to display: MRC");
-        System.out.println("Switch trig unit mode(Degree, Radians): switch trig unit");
+        System.out.println("Switch trig unit mode (Degree, Radians): switch trig unit");
         System.out.println("Circumference of a circle: circ");
     }
 }
