@@ -4,11 +4,11 @@ public class Calculator {
 
     public static void run() {
 
-        boolean calcOn = true;
-
         double displayVal = 0.0;
 
         double memoryVal = 0.0;
+
+        boolean calcOn = true;
 
         boolean degree = true;
 
@@ -115,9 +115,9 @@ public class Calculator {
         System.out.println("Four display modes: binary, octal, decimal, hexadecimal ");
         System.out.println("Clear the display: clear ");
         System.out.println("Turn off the calculator: exit ");
-        System.out.println("Add the currently displayed Value to the value in memory: M+ ");
+        System.out.println("Add the currently displayed value to the value in memory: M+ ");
         System.out.println("Reset memory: MC" );
         System.out.println("Recall the current value from memory to display: MRC" );
-        System.out.println("Switch trig unit mode(Degree, Radians): switch trig unit ");
+        System.out.println("Switch trig unit mode (Degree, Radians): switch trig unit ");
     }
 }
